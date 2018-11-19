@@ -10,3 +10,7 @@ where g is group size and t is the lead time in days.
 
 Florian L.
 Christian L.
+
+## BPG
+
+![BPG Logo](https://raw.githubusercontent.com/warp1337/bpg/master/bpg_logo.jpg)
