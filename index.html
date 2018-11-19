@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Support@BPG</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <style>
+        input[type='text'] { font-size: 20px; font-family: 'VT323', monospace; }
+        p {
+           -webkit-text-stroke-width: 1px;
+           -webkit-text-stroke-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<img src="bpg_logo_sticker_2.png" align="right" alt="BPG baby!" width="45%">
+
+<form id="WHOOOP">
+    <p style="font-size:2.5em; font-family: 'VT323', monospace; color: #ffffff;margin-left:50px;" align="left"> Enter
+        time of BPG event <3</p> <input style="margin-left:50px;width: 250px;" type="text" id="day" name="day"
+                                        value="November 19, 2018 23:15:30">
+    <button type="button" onclick="calc()" class="btn btn-dark">CALCULATE!!!111!</button>
+    <button type="button" onclick="alert('Formula: strike_group_size = 2/lead_time + 4 (lead time in days)')"
+            class="btn btn-dark">WTF?
+    </button>
+
+</form>
+
+<p id="gs" style="font-size:50px; font-family: 'VT323', monospace; color: #ffffff; margin-left: 50px;"></p>
+
+<script>
+    var date_diff_indays = function(date) {
+        dt1 = new Date(Date.now());
+        dt2 = new Date(date);
+        diff = Math.floor( (Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate(), dt2.getHours(), dt2.getMinutes(), dt2.getSeconds()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate(), dt1.getHours(), dt1.getMinutes(), dt1.getSeconds()) ) / (1000 * 60 * 60 * 24) );
+        if (diff < 0) {
+            //alert(diff);
+            alert("nic3 try, me knows my math, u stupid!");
+            return "u stupid";
+        } else if (diff == 0){
+            return "Everyone!";
+        } else {
+            group_size = Math.floor(2/diff) + 4;
+            return group_size;
+        }
+    }
+
+    function calc() {
+        d = document.getElementById("day").value;
+        document.getElementById("gs").innerHTML = "Beep Bop, $trike size: " + date_diff_indays(d);
+    }
+
+    var totalCount = 4;
+
+    function ChangeIt() {
+        var num = Math.ceil( Math.random() * totalCount );
+        document.body.background = 'bg_'+num+'.jpg';
+        document.body.style.backgroundSize = "cover";
+    }
+
+    ChangeIt();
+
+</script>
+
+<img src="bpg_pony.png" align="left" alt="pony pony pony" width="35%" style="bottom:0;">
+
+</body>
+</html>
+
