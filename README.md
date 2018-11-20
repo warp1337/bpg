@@ -8,8 +8,9 @@ where g is group size and t is the lead time in days.
 
 ## Authors:
 
-Florian L.
-Christian L.
+- Florian L.
+- Christian L.
+- Sergio P.
 
 ## BPG
 
